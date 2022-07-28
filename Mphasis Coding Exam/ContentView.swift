@@ -13,8 +13,8 @@ var test = DataFunction(web: PATH)
 struct ContentView: View {
     var body: some View {
         let _ = print(test.getData())
-        List (test.fetch){_ in
-            Text("Data should be here")
+        List (test.fetch){i in
+            Text("data should go here")
         }
     }
 }
