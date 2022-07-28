@@ -14,7 +14,13 @@ struct ContentView: View {
     var body: some View {
         let _ = print(test.getData())
         List (test.fetch){i in
-            Text("data should go here")
+            VStack(alignment: .leading){
+                Text("User Id: \("id")")
+                Text("Name: \("firstName") \("LastName")")
+                Text("Email: \("email")")
+            }.onTapGesture {
+                print("go to next page")
+            }
         }
     }
 }
